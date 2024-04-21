@@ -1,0 +1,82 @@
+body {
+    background-color: #0a0a0a; /* Темний колір фону */
+    color: #fff; /* Світлий колір тексту */
+    font-family: Arial, sans-serif; /* Шрифт Arial або аналогічний */
+    animation: backgroundAnimation 20s infinite linear alternate; /* Анімація для фону */
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #0a0a0a;
+    }
+    50% {
+        background-color: #111;
+    }
+    100% {
+        background-color: #0a0a0a;
+    }
+}
+
+h1 {
+    color: #f44336; /* Червоний колір для заголовків */
+    animation: glowAnimation 1.5s infinite alternate; /* Анімація для заголовків */
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #f44336;
+    }
+    100% {
+        text-shadow: 0 0 20px #f44336, 0 0 30px #ff1744, 0 0 40px #ff5252;
+    }
+}
+
+input[type="text"],
+button {
+    background-color: #222; /* Темний колір для текстового поля та кнопки */
+    color: #fff; /* Світлий колір тексту в текстовому полі та кнопці */
+    border: 1px solid #f44336; /* Червона рамка для текстового поля та кнопки */
+    transition: background-color 0.3s ease; /* Плавна анімація для зміни кольору фону */
+}
+
+input[type="text"]:focus,
+button:focus {
+    background-color: #111; /* Зміна кольору фону при фокусі */
+}
+
+.styled-console {
+    background-color: #111; /* Темний колір фону для компонента виводу даних */
+    color: #fff; /* Світлий колір тексту для компонента виводу даних */
+    border: 1px solid #f44336; /* Червона рамка для компонента виводу даних */
+    padding: 10px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif; /* Шрифт Arial або аналогічний */
+    height: 100px; /* Збільшимо висоту компонента */
+    overflow-y: auto; /* Додамо прокрутку, якщо контент перевищує висоту */
+    display: flex; /* Використовуємо flexbox для вирівнювання по центру */
+    justify-content: center; /* Горизонтальне вирівнювання по центру */
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    animation: glitchAnimation 3s infinite; /* Анімація "глюків" */
+}
+
+@keyframes glitchAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.styled-console.with-data {
+    height: 100px; /* Фіксована висота для компонента виводу даних з даними */
+}
