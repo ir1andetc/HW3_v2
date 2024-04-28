@@ -30,6 +30,11 @@ function checkYear() {
     } else {
         let year = parseInt(yearInput);
 
+        // Виведення результату перевірки на NaN в консоль
+        // Одним з варіантив перевирки щоб отримати "NaN = true" є текст введений у інпут філд
+        // Вивід логів у консоль дев тулзів
+        console.log("Перевірка року на NaN:", myIsNaN(year));
+
         // Власна перевірка на isNaN замість використання isNaN
         if (myIsNaN(year) || year < 0) {
             resultDiv.textContent = "Введено неправильне значення для року.";
